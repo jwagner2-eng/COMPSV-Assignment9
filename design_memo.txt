@@ -1,0 +1,14 @@
+DESIGN MEMO
+Social Network Graph
+
+Why a Graph Works for a Social Network
+
+a graph is the best choice for representing a social network because people can have connections with a lot of different people. Unlike some other data structures, graphs allow relationships to go in multiple directions. In my program, each person is represented by a node, and friendships are represented by connections between those nodes. Since friendships go both ways, adding someone as a friend also adds the connection to the both people's list.
+
+Why Lists and Trees Are Less Effective
+
+A regular list would make it easy to store people's names, but it wouldn't be as useful for showing how everyone is connected. We would need additional information to keep track of friendships. A tree is useful for showing relationships that follow a hierarchy, like a company or family structure. However, social networks don't follow a hierarchy because people have friendships across many different groups. A graph handles these connections more naturally.
+
+Performance and Structural Trade-offs
+
+One thing I noticed while implementing the network is that using a dictionary makes finding a person by name efficient. Each person also has a list of friends, which makes it easy to see their connections. However, checking whether a friendship already exists requires searching through that person's friend list. Printing the network also takes more work as the number of people and friendships increases. I think this is a reasonable trade-off because the structure is straightforward and works well for representing relationships between people.
